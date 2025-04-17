@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows"
+    schedule:
+      interval: "monthly"
+      timezone: "Europe/Oslo"
+    commit-message:
+      include: scope
+      prefix: "ci"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: saturday
+      timezone: "Europe/Oslo"
+    commit-message:
+      include: scope
+      prefix: "chore"
